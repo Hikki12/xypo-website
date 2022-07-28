@@ -1,0 +1,271 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+html, body {
+    overflow-x: hidden;
+    font-family: Arial;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 9px;
+    width: 100%;
+    height: 60px;
+    /* border: 2px solid; */
+}
+
+header .social {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+
+header .social ul {
+    list-style: none;
+}
+
+header .social ul li a img {
+    width: 20px;
+    margin: 5px 0;
+}
+
+header .toggle {
+    margin-left: auto;
+    background: url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+header .navigation {
+    position: absolute;
+    top: 0;
+    right: -1000px;
+    width: 30vh;
+    height: 100vh;
+    padding: 30px 20px;
+    background: #f67c92;
+    transition: ease-in-out .5s;
+}
+
+header .navigation.active {
+    visibility: visible;
+    opacity: 1;
+    right: -20px;
+}
+
+header .navigation ul {
+    list-style: none;
+}
+
+header .navigation ul li {
+    margin-bottom: 50px;
+}
+
+
+header .navigation ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+
+/* Home styles */
+.home {
+    min-height: 100vh;
+}
+
+.home .container {
+    padding: 0 60px;
+    max-width: 300px;
+}
+
+.home .container .logo-container {
+    height: 70px;
+    width: 100px;
+    margin-bottom: 100px;
+}
+
+.home .container .logo-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.home .container h3 {
+    margin-bottom: 20px;
+    font-size: 1.75em;
+}
+
+.square-pink {
+    width: 20px;
+    height: 20px;
+    background: #f67c92;
+}
+
+
+.home .container p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.home .container .button {
+    padding: 15px;
+    border: 2px solid pink;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.home .container .button ~ .square-pink  {
+    margin-top: 60px;
+}
+
+.line {
+    margin-top: 10px;   
+    width: 100%;
+    height: 2px;
+    background-color:#f67c92;
+}
+
+.line.line-1 {
+    width: 150px;
+}
+
+.line.line-2 {
+    width: 100px;
+}
+
+/* About section */
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.bg-about {
+    /* margin-top: 40px; */
+    background-image: url(../images/about.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+  
+}
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: end;
+    padding: 20px 60px;
+    max-width: 300px;
+}
+
+.about .container h3 {
+    margin: 20px 0;
+    font-size: 1.75em;
+}
+
+.about .container h3 + .square-pink {
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.about .container p {
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.about .quote {
+    margin-top: 25%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.about .quote-author {
+    color: gray;
+}
+
+
+@media (min-width: 640px) {
+
+    header {
+        width: 95%;
+    }
+
+    header {
+        padding: 8px 20px;
+    }
+
+    .home {
+        background: url(../images/background.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .home .container {
+        padding: 0 80px;
+    }
+
+    .home .container h3 {
+        margin-top: 120px;
+    }
+
+    .about {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .bg-about {
+        height: 300px;
+        width: 50%;
+    }
+
+    .about .container {
+        padding: 0 80px;
+    }
+}
+
+@media (min-width: 991px) {
+    .bg-about {
+        width: 800px;
+        height: 500px;
+    }
+
+    .about .container {
+        max-width: 360px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .bg-about {
+        height: 600px;
+        /* height: 800px; */
+    }
+}

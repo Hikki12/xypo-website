@@ -132,9 +132,15 @@ header .navigation ul li a {
 
 .home .container .button {
     padding: 15px;
-    border: 2px solid pink;
+    border: 2px solid #f67c92;
     font-weight: bold;
     margin-bottom: 40px;
+}
+
+.home .container .button:hover {
+    letter-spacing: 1px;
+    background-color: #f67c92;
+    color: white;
 }
 
 .home .container .button ~ .square-pink  {
@@ -161,6 +167,7 @@ header .navigation ul li a {
     display: flex;
     flex-direction: column;
     padding: 40px 0;
+    align-items:center;
 }
 
 .bg-about {
@@ -210,6 +217,133 @@ header .navigation ul li a {
     color: gray;
 }
 
+/* Signup */
+.contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+    align-items: center;
+}
+
+.contact .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    max-width: 380px;
+    min-width: 230px;
+    padding: 0 20px;
+}
+
+.contact .form-container h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.contact .form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.contact .form-container form input {
+    height: 40px;
+    border: none;
+    border: 1px solid #f67c92;
+    padding: 0 10px;
+}
+
+.contact .form-container form input:focus,
+.contact .form-container form input:focus-visible,
+.contact .form-container form input:active
+{
+    box-shadow: none;
+    border-radius: 0px;
+    border: 2px solid #f67c92;
+}
+.contact .form-container form .submit-container {
+    display: flex;
+    gap: 5px;
+}
+
+.contact .form-container form .submit-container button {
+    border: none;
+    background: white;
+    padding: 10px;
+    border: 1px solid #f67c92;
+    width: 50%;
+    cursor: pointer;
+}
+
+.contact .form-container form .submit-container button:hover {
+    background: #f67c92;
+    color:white;
+    letter-spacing: 2px;
+}
+
+.contact .bg-form {
+    background: url(../images/contact.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 200px;
+    max-width: 330px;
+    width: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+    padding: 30px 20px;
+}
+
+footer .hr {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    background: #f67c92;
+    margin-bottom: 60px;
+}
+
+footer .grid {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+footer .grid div {
+    display: grid;
+    place-content: center;
+}
+
+footer .grid div h4 {
+    color:#f67c92;
+    font-weight: bold;
+}
+
+footer .grid img {
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+footer .grid div .button {
+    color: gray;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 7px;
+    border: 2px solid pink;
+}
+
+footer .grid div .button:hover {
+    letter-spacing: 1px;
+    background: #f67c92;
+    color: white;
+}
 
 @media (min-width: 640px) {
 
@@ -249,6 +383,10 @@ header .navigation ul li a {
     .about .container {
         padding: 0 80px;
     }
+
+    footer .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (min-width: 991px) {
@@ -260,6 +398,9 @@ header .navigation ul li a {
     .about .container {
         max-width: 360px;
     }
+    footer .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
 
 }
 
@@ -268,4 +409,19 @@ header .navigation ul li a {
         height: 600px;
         /* height: 800px; */
     }
+
+    .contact {
+        flex-direction: row;
+    }
+
+    .contact .bg-form {
+        min-width: 600px;
+        min-height: 500px;
+    }
+
+    footer .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+
 }

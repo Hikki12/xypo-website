@@ -23,7 +23,7 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#offer">Offer</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
         <div class="toggle"></div>
@@ -64,9 +64,66 @@
                 <p class="quote-author">----Abigail Adams</p>
             </div>
         </section>
+
+        <section class="contact" id="contact">
+            <div class="form-container">
+                <h3>Signup to join our learning community</h3>
+                <form>
+                    <input
+                        type="text"
+                        placeholder="Enter Name"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Enter Email"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Enter Password"
+                    />
+                    <div class="submit-container">
+                        <button type="button">Signup</button>
+                        <button type="buttom">Start free trial</button>
+                    </div>
+                </form>
+            </div>
+            <div class="bg-form"></div>
+        </section>
     </main>
 
     <footer>
+        <div class="hr"></div>
+        <div class="grid">
+            <div>
+                <h4>About us</h4>
+                <p>Request a Demo</p>
+                <p>FAQs</p>
+            </div>
+            <div>
+                <h4>Product</h4>
+                <p>Request a Demo</p>
+                <p>FAQs</p>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <p>Request a Demo</p>
+                <p>FAQs</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <p>Request a Demo</p>
+                <p>FAQs</p>
+            </div>
+            <div>
+                <p>support@xypo.com</p>
+            </div>          
+            <div>
+                <img
+                    src="./images/logo.png"
+                >
+                <a class="button">English</a>
+            </div>
+        </div>
 
     </footer>
     <script src="./js/index.js"></script>

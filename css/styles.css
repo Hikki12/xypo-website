@@ -221,9 +221,9 @@ header .navigation ul li a {
     color: gray;
 }
 
-/* Features */
+/* Features styles */
 .features {
-    min-height: 60vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,6 +289,54 @@ header .navigation ul li a {
     width: 50%;
 }
 
+/* Offers styles */
+
+.offers {
+    min-height: 60vh;
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+}
+
+.offers .bg-offers {
+    background-image: url(../images/offer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:300px;
+    width: 100%;
+    max-width: 800px;
+
+}
+
+.offers .container {
+    padding: 0 60px;
+    max-width: 400px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-end;
+    text-align: end;
+}
+
+.offers .container h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.offers .container p {
+    margin-top: 20px;
+}
+
+/* .offers .container h3 ~ .square-pink {
+    margin: 20px 0;
+} */
+
+.offers .container .button {
+    margin-top: 40px;
+}
 /* Courses styles */
 
 .courses {
@@ -313,6 +361,10 @@ header .navigation ul li a {
     margin: 20px 0; 
 }
 
+.courses .container p {
+    margin-bottom: 40px;
+}
+
 .courses .bg-courses {
     background: url(../images/course.png);
     background-repeat: no-repeat;
@@ -325,7 +377,7 @@ header .navigation ul li a {
 
 /* Contact styles */
 .contact {
-    min-height: 60vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     padding: 40px 60px;
@@ -389,6 +441,11 @@ header .navigation ul li a {
     background: #f67c92;
     color:white;
     letter-spacing: 2px;
+}
+
+.contact .form-container .lines-container {
+    width: 100%;
+    margin-top: 30px;
 }
 
 .contact .bg-form {
@@ -496,11 +553,20 @@ footer .grid div .button:hover {
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     .courses .bg-courses {
         min-height: 450px;
         /* man-width: 500px; */
     }
 
+    .offers {
+        flex-direction: row;
+    }
+
+    .offers .bg-offers {
+        width: 700px;
+        height: 600px;
+    }
     footer .grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -543,8 +609,8 @@ footer .grid div .button:hover {
     }
 
     .contact .bg-form {
-        min-width: 600px;
-        min-height: 500px;
+        min-width: 550px;
+        min-height: 380px;
     }
 
     footer .grid {

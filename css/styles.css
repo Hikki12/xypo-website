@@ -56,6 +56,7 @@ header .toggle {
     width: 40px;
     height: 40px;
     z-index: 2;
+    cursor: pointer;
 }
 
 header .navigation {
@@ -130,14 +131,17 @@ header .navigation ul li a {
     margin-bottom: 50px;
 }
 
-.home .container .button {
+.button {
     padding: 15px;
+    background: white;
     border: 2px solid #f67c92;
-    font-weight: bold;
+    font-weight: 500;
+    color: black;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
-.home .container .button:hover {
+.button:hover {
     letter-spacing: 1px;
     background-color: #f67c92;
     color: white;
@@ -217,13 +221,117 @@ header .navigation ul li a {
     color: gray;
 }
 
-/* Signup */
-.contact {
-    min-height: 100vh;
+/* Features */
+.features {
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
-    padding: 0 60px;
     align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+}
+
+.features .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+}
+
+.features .container .feature {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    max-width: 300px;
+}
+
+.features .container .feature img {
+    height: 120px;
+}
+
+.features .container .feature h5 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: rgb(29, 29, 29);
+}
+
+.features .container .feature h5 {
+    font-size: 1.1em;
+    color:rgb(47, 47, 47)
+}
+
+.features .submit {
+    margin-top: 80px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    min-width: 300px;
+    padding: 0;
+}
+
+.features .submit .lines-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+}
+
+.features .submit .lines-container .line-1 {
+    width: 100px;
+}
+
+.features .submit .lines-container .line-2 {
+    width: 70px;
+}
+
+.features .submit .button {
+    width: 50%;
+}
+
+/* Courses styles */
+
+.courses {
+    min-height: 60vh;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.courses .container {
+    max-width: 400px;
+    margin-bottom: 100px;
+}
+
+.courses .container h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.courses .container h3 ~ .square-pink {
+    margin: 20px 0; 
+}
+
+.courses .bg-courses {
+    background: url(../images/course.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 150px;
+    max-height: 500px;
+    min-width: 100%;
+    max-width: 400px;
+}
+
+/* Contact styles */
+.contact {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    align-items: center;
+    justify-content:space-between;
+
 }
 
 .contact .form-container {
@@ -292,7 +400,6 @@ header .navigation ul li a {
     max-width: 330px;
     width: 100%;
     min-height: 200px;
-    margin: 0 auto;
 }
 
 /* Footer styles */
@@ -302,7 +409,8 @@ footer {
 
 footer .hr {
     height: 1px;
-    width: 90%;
+    /* width: 80%; */
+    padding: 0 60px;
     margin: 0 auto;
     background: #f67c92;
     margin-bottom: 60px;
@@ -384,9 +492,19 @@ footer .grid div .button:hover {
         padding: 0 80px;
     }
 
+    .features .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .courses .bg-courses {
+        min-height: 450px;
+        /* man-width: 500px; */
+    }
+
     footer .grid {
         grid-template-columns: repeat(4, 1fr);
     }
+
 }
 
 @media (min-width: 991px) {
@@ -398,6 +516,16 @@ footer .grid div .button:hover {
     .about .container {
         max-width: 360px;
     }
+    .courses {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .courses .bg-courses {
+        min-height: 400px;
+        min-width: 660px;
+    }
+
     footer .grid {
         grid-template-columns: repeat(5, 1fr);
     }
